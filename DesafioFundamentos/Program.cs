@@ -22,7 +22,19 @@ bool exibirMenu = true;
 // Realiza o loop do menu
 while (exibirMenu)
 {
-    Console.Clear();
+     try
+    {
+        Console.Clear();
+        Console.WriteLine("Seja bem vindo ao sistema de estacionamento!");
+
+    }
+    catch (IOException ex)
+    {
+        Console.WriteLine("Ocorreu um erro ao limpar o console:");
+        Console.WriteLine(ex.Message);
+    }
+
+
     Console.WriteLine("Digite a sua opção:");
     Console.WriteLine("1 - Cadastrar veículo");
     Console.WriteLine("2 - Remover veículo");
